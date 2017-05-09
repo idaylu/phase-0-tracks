@@ -11,4 +11,9 @@ puts "What is the hamster's estimated age?"
 if hamster_age==""
   then hamster_age=nil
 end
-puts "Please verify this data. The hamster's name is #{hamster_name}. He has a volume level of #{hamster_volume}. #{hamster_name} has #{hamster_furcolor} fur. #{hamster_adopt}, he is a good candidate for adoption. #{hamster_name} is at the age of #{hamster_age}."
+puts "Please verify this data. The hamster's name is #{hamster_name}. He has a volume level of #{hamster_volume}. #{hamster_name} has #{hamster_furcolor} fur. #{hamster_adopt}, he is a good candidate for adoption."
+if age == nil
+  puts "#{name} is unknown years old"
+else
+  puts "#{name} is #{age} years old."
+end
