@@ -1,0 +1,9 @@
+Algorithm on how to guide personal robot on using elevator
+-Enter elevator 
+-Search to see if destination floor has been pressed; if not, enter floor you want to reach
+	-do not close doors if destination floor has not been chosen
+-As each floor is reached, check to see if it matches destination floor
+	-If not, do not exit
+	-Exit at destination floor when reached
+
+
