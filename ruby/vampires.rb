@@ -1,29 +1,9 @@
-def employee_info
-  counter= employee_number
-  until counter == 0
-    if age_verify && garlicbread && insurance == false
-      puts "Almost certainly a vampire."
-    elsif age_verify && (garlicbread || insurance) == true
-      puts "Probably not a vampire."
-    elsif age_verify && (garlicbread || insurance) == false
-      puts "Probably a vampire."
-    else
-      puts "Results inconclusive."
-      counter -= 1
-  end
-end
-
-def age_verify
-    if 2017-birthyear != age
-      return true
-    else false
-  end
-end
-
+# VAmpire Testing Survey for Employees
+puts "How many employees need to be processed?"
+  employee_number = gets.chomp!.to_i
+until employee_number == 0
 
 #This is an employee survey to screen for vampires
-puts "How many employees need to be processed?"
-  employee_number=gets.chomp!.to_i
 puts "What is your name?"
   name=gets.chomp!
 puts "How old are you?"
@@ -37,14 +17,55 @@ puts "Would you like to enroll in company's health insurance?"
 puts "What allergies do you have?"
   allergies=gets.chomp!
 
+  if age == 2017-birthyear
+      true_age = true
+  else
+      true_age= false
+  end
 
-if name == "Drake Cula" or "Tu Fang"
-    puts "Definitely a vampire."
-elsif allergies == "sunshine"
-    puts "Probably a vampire."
-else
-  puts employee_info
+  if garlicbread == "yes"
+    eatsgarlic = true
+  else
+    eatsgarlic = false
+  end
+
+  if name == "Drake Cula" or "Tu Fang"
+    name_check= true
+  else
+    name_check= false
+  end
+
+  if insurance == "yes"
+    health = true
+  else
+    health = false
+  end
+
+puts "Please list all allergies. Type done when completed."
+  allergies= gets.chomp!
+  until allergies == "done"
+    if allergies == "sunshine"
+      allergies = true
+    else allergies == "done"
+      allergies= false
+    end
+  end
+
+  if name_check
+    puts " Definitely a vampire."
+  elsif allergies
+      puts "Probably a vampire."
+  elsif true_age && (eatsgarlic || health)
+      puts "Probably not a vampire."
+  elsif !true_age && (!garlicbread || !insurance)
+      puts "Probably a vampire."
+  elsif !true_age && !garlicbread && !insurance
+      puts "Almost certainly a vampire."
+  else
+      puts "Results inconclusive."
+  end
+
+employee_number -= 1
 end
 
 puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
-
