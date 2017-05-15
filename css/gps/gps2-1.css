@@ -1,0 +1,38 @@
+header{
+  background-color: purple;
+   margin: 10px;
+}
+
+section{
+  width: 48%;
+}
+
+.column-1{
+  background-color: purple;
+  float: left;
+  margin: 10px;
+}
+
+.column-2{
+  background-color: purple;
+  float: right;
+  margin: 10px;
+}
+
+footer{
+  background-color: purple;
+  clear: both;
+  margin: 10px;
+}
+
+summary{
+  background-color: pink;
+}
+
+h2{
+  background-color: white
+}
+
+body{
+  background-color: purple;
+}
