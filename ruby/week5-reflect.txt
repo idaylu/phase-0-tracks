@@ -1,0 +1,41 @@
+Variables
+1. What is a variable? Why might a programmer use a variable?
+A variable is used to store data. It can be in the form of a letter or a string. A programmer uses a variable to create methods or to make a problem easier to look at. 
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+It will put the strings for the first and last name together and set the variable full_name to equal “AbrahamLincoln”
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+string- It is a combination of letters; When you have an input of words
+integer- Whole numbers; when you have items to count
+float-Numbers to the decimal point ; when you have an equation that doesn’t result in whole numbers
+nil- nonexistent; when no input is entered
+boolean-true or false; when there are only two answers to a problem which are yes or no/true or false
+Algorithms- a set of steps for the program to read to execute an action/ series of actions; when you need ruby to run a series of actions
+4. What is an algorithm?
+Its like a procedure or a series of directions.
+5. What are two common categories of algorithm in computer science? 
+Arrays and sorting
+Methods
+6. What is a method? Why might a programmer choose to use a method?
+A method is when you set expressions to return you a value. You use a method so you can run an expression or series of expressions multiple times without having to retype the code.
+7. Define the following terms as they relate to a method. 
+
+return value- what a method will produce when called
+side effect- everything else that is not the return value or the expression of the method
+parameter- guidelines for the method
+argument- the expression of the method
+implicit return- a return that is given when not asked for the method
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+Global scope is when a variable can be called anywhere but a method scope is when the variable can only be called within the method. It does affect the availability of the variable depending on where you are within the code.  
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+Control flow is there so we can have different outcomes depending on the user’s input.
+10. Define the following terms as they relate to flow control.
+
+loop- it repeats the given code 
+if- sets a parameter for the code
+else- gives an alternative solution if parameter is not met
+elsif- gives multiple solutions if parameter is not 
+while- sets a parameter for the code while the code meets this
+until- sets parameter up until the code meets this
