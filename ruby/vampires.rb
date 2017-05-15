@@ -1,11 +1,11 @@
 def employee_info
   counter= employee_number
-  until counter = 0
-    when age_verify && garlicbread && insurance = false
+  until counter == 0
+    if age_verify && garlicbread && insurance == false
       puts "Almost certainly a vampire."
-    when age_verify && (garlicbread || insurance) = true
+    elsif age_verify && (garlicbread || insurance) == true
       puts "Probably not a vampire."
-    when age_verify && (garlicbread || insurance) = false
+    elsif age_verify && (garlicbread || insurance) == false
       puts "Probably a vampire."
     else
       puts "Results inconclusive."
@@ -40,7 +40,7 @@ puts "What allergies do you have?"
 
 if name == "Drake Cula" or "Tu Fang"
     puts "Definitely a vampire."
-elsif allergies== "sunshine"
+elsif allergies == "sunshine"
     puts "Probably a vampire."
 else
   puts employee_info
