@@ -41,20 +41,18 @@ puts "Budget (Value only):"
 client_budget=gets.chomp.to_i
 info[:budget]=client_budget
 
-
-if
-  puts "Is there any more information you would like to update? If so please enter the key. Otherwise type none."
-  gets.chomp !="none"
-  client_key=gets.chomp.to_sym
-  puts "What do you want to update it to?"
-  client_value_update=gets.chomp
-  info[client_key]=client_value_update
+puts "Is there any more information you would like to update? If so please enter the key. Otherwise type none."
+update_info=gets.chomp
+if update_info =="none"
   puts info
 else
+  update_info =gets.chomp.to_sym
+  p update_info
+  puts "What do you want to update it to?"
+  client_value_update=gets.chomp
+  info[update_info]=client_value_update
   puts info
 end
-
-
 
 
 
