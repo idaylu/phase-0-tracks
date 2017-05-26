@@ -104,4 +104,10 @@ delete_item(new_hash,"lemonade")
 update_list(new_hash,"ice-cream",1)
 print(new_hash)
 
-
+#What did you learn about pseudocode from working on this challenge?
+# I learned how pseudocode is an important step of the process to help break down
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# What does a method return?
+# What kind of things can you pass into methods as arguments?
+# How can you pass information between methods?
+# What concepts were solidified in this challenge, and what concepts are still confusing?
