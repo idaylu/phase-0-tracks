@@ -4,3 +4,15 @@ Repeated guesses do not count against the user.
 The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the user will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the user enters a guess of "c".
 The user should get a congratulatory message if they win, and a taunting message if they lose.
 
+=begin
+Peusdocode
+Create class for the game
+Create method for
+-Initialize
+-Check guess letter
+-Guess Number
+-Current State
+-Message with Win/Lose message
+Create User interface
+=end
+
