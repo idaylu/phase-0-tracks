@@ -105,9 +105,14 @@ update_list(new_hash,"ice-cream",1)
 print(new_hash)
 
 #What did you learn about pseudocode from working on this challenge?
-# I learned how pseudocode is an important step of the process to help break down
+#I learned that pseudocode plays an important role in making the task of coding easier and less daunting. It also helps ensure that we aren't missing nay steps along the way.
 # What are the tradeoffs of using arrays and hashes for this challenge?
+#With an array we couldnt' list both the quantity and item unless we created two and synced the item with the quantity. A hash is much easier to manage. When it came down to just data not paired with another set of data, an array worked better.
 # What does a method return?
+#A method returns whatever you want it to return as long as it makes sense. In this assignment the methods returned an array.
 # What kind of things can you pass into methods as arguments?
+#You can pass string, integer, hash, array, etc.
 # How can you pass information between methods?
+#You can pass information between methods by storing as variable and using variable and calling that variable when needed.
 # What concepts were solidified in this challenge, and what concepts are still confusing?
+#How to use a hash and array as well as iteration were all reinforced in this assignment.
