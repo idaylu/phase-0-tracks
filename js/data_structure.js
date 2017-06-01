@@ -1,5 +1,5 @@
-var names=["Ed","Sea Biscuit","Black Beauty","Bob"];
 //Release 0 & 1
+var names=["Ed","Sea Biscuit","Black Beauty","Bob"];
 var colors=["blue", "red","yellow","green"];
 
 colors.push("purple");
