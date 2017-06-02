@@ -4,7 +4,10 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
+#It allows this ruby file to read the data/ retrieve the data from the file that is called. Difference between require_relative and require is where the method looks for the file. Require relative is within the same folder. Require looks for the file within
+#Search ruby require relative & require.
+#Ruby Symbols
+#Ruby Different types of variables--look up ruby constant; how to recognize and what's its scope
 #
 require_relative 'state_data'
 
@@ -69,18 +72,22 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
+STATE_DATA.each do | state,population_hash|
+  instance=VirusPredictor.new(state,population_hash[:population_density],population_hash[:population])
+  instance.virus_effects
+end
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-alabama.virus_effects
+# alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
+# alabama.virus_effects
 
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+# jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
+# jersey.virus_effects
 
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
+# california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
+# california.virus_effects
 
-alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
+# alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
+# alaska.virus_effects
 
 
 #=======================================================================
