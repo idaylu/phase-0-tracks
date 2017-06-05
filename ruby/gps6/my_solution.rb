@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself ].
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
 #It allows this ruby file to read the data/ retrieve the data from the file that is called. Difference between require_relative and require is where the method looks for the file. Require relative is within the same folder. Require looks for the file within
@@ -20,8 +20,7 @@ class VirusPredictor
   end
 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    puts "In the state of #{@state}, #{predicted_deaths} people will die due to the outbreak. The speed of spread for #{@state} is #{speed_of_spread}.
   end
 
   private
@@ -92,3 +91,13 @@ end
 
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+#One uses symbols and the other uses the rocket symbol.
+# What does require_relative do? How is it different from require?
+#Require relative allows this ruby file to access and read the data in the given file.
+# What are some ways to iterate through a hash?
+#.each do loop is a way.We can iterate through the key value pair, or just th e key, or just the value.
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+#The variables are all instance variables within the methods. The method called for other methods within the class.
+# What concept did you most solidify in this challenge?
+#I solidified iterating through nested hashes.
