@@ -5,10 +5,7 @@
 
 # EXPLANATION OF require_relative
 #It allows this ruby file to read the data/ retrieve the data from the file that is called. Difference between require_relative and require is where the method looks for the file. Require relative is within the same folder. Require looks for the file within
-#Search ruby require relative & require.
-#Ruby Symbols
-#Ruby Different types of variables--look up ruby constant; how to recognize and what's its scope
-#
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -19,12 +16,15 @@ class VirusPredictor
     @population_density = population_density
   end
 
+#Print method to print predicted deaths and speed of spread
   def virus_effects
-    puts "In the state of #{@state}, #{predicted_deaths} people will die due to the outbreak. The speed of spread for #{@state} is #{speed_of_spread}.
+    puts "In the state of #{@state}, #{predicted_deaths} people will die due to the outbreak. The speed of spread for #{@state} is #{speed_of_spread}."
   end
 
+#Private affects the methods visibility.
   private
 
+#this method calculates the number of deaths based off of the density. The density will dictate what number the popluation is calculated by.
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -43,6 +43,7 @@ class VirusPredictor
 
   end
 
+  #This method calculates the speed based off of the population density.
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
