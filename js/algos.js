@@ -28,39 +28,48 @@ console.log(wordReturn(array3));
 //While iterating, checks to see if any of the key-pair values match
 //If key-pair values match then return true
 //If no key values match then return false
-function checkValue(hash1,hash2){
-  for(i=0;i<hash1.length;i++){
-    if(hash1[i]==hash2[i]){
-      true
-    }
-    else {
-     false
+function checkSimilar(hash1,hash2){
+  var same=false;
+  for (key in hash1){
+    if (hash1[key]==hash2[key]){
+      same=true
     }
   }
-}
-
-//Creates an array with all the keys for both hashes
-var hash1Keys=[];
-  for (var key in hash1){
-    hash1keys.push(key);
+    console.log(same)
   }
-var hash2Keys=[];
-  for (var key in hash2){
-    hash2keys.push(key);
-  }
-
-//Creates an array with all the values of the keys
-var hash1Values=[];
-for (i=0;i<Object.keys(hash1).length;i++){
-  hash1Values.push()
-}
-hash1Values.push(hash1[])
-var hash2Values=[];
-
 
 //Driver Code
-hash1={name: "Steven", age: 54};
-hash2={name: "Tamir", age: 54};
+  var lunch1={fruit:"apple",sandwich:"ham",drink:"caprisun"}
+  var lunch2={fruit:"orange",sandwich:"ham",drink:"water"}
+  var lunch3={fruit:"banana",sandwich:"turkey",drink:"water"}
 
-console.log(checkValue(hash1,hash2));
+  checkSimilar(lunch1,lunch2);
+  checkSimilar(lunch1,lunch3);
+  checkSimilar(lunch2,lunch3);
+
+  //Release 2
+//Creates a function that takes a number for length
+//Creates words and returns number of words equal to that length
+//Generation of random "words"--does not have to be sensical
+//Must have Minimum of 1 letter and max of 10 letters
+//Stores words in array
+//Driver code for 10 generations of arrays of words
+function randomArray(number){
+  var letter = 'abcdefghijklmnopqrstuvwxyz';
+  var wordArray=[];
+  for (var i=0;i<number;i++){
+    var word="";
+    for (var j=0;j< Math.floor((Math.random()*10) + 1);j++){
+      word += letter[Math.floor(Math.random()*26)]
+      }
+      wordArray.push(word);
+    }
+    console.log(wordArray);
+    return wordArray;
+  }
+
+  //Driver code
+randomArray(10);
+
+
 
