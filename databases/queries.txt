@@ -1,0 +1,29 @@
+Release 2:
+
+Question 2:
+Command:
+SELECT users.*,reviews.*,businesses.* FROM (reviews INNER JOIN users ON reviews.user_id=users.id) INNER JOIN businesses ON(reviews.business_id=businesses.id);
+
+Output:
+4|Steven|Wonder|1|4|Great venue.|1|4|1|Grundy Hollow Wedding Chapel
+2|Mandy|Kaling|2|3|Okay towing.|2|2|2|Amir's Towing
+3|Angela|Jolie|3|5|Left me all calm and relaxed.|4|3|4|Lotus Yoga
+1|Bradford|Pitt|4|3|Great time. Delish drinks.|3|1|3|The Beagle Nightclub
+
+Question 3:
+Command:
+SELECT users.first_name, users.last_name, businesses.name, reviews.comment FROM reviews JOIN users ON reviews.user_id= users.id JOIN businesses ON reviews.business_id=businesses.id;
+
+Output:
+Steven|Wonder|Grundy Hollow Wedding Chapel|Great venue.
+Mandy|Kaling|Amir's Towing|Okay towing.
+Angela|Jolie|Lotus Yoga|Left me all calm and relaxed.
+Bradford|Pitt|The Beagle Nightclub|Great time. Delish drinks.
+
+Question 4:
+Command:
+SELECT users.*,reviews.*,businesses.* FROM (reviews INNER JOIN users ON reviews.user_id=users.id) INNER JOIN businesses ON(reviews.business_id=businesses.id) WHERE (reviews.business_id=1);
+
+Output:
+4|Steven|Wonder|1|4|Great venue.|1|4|1|Grundy Hollow Wedding Chapel
+
