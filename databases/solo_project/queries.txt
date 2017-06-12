@@ -1,0 +1,102 @@
+Release 2
+1.)
+sqlite> SELECT * FROM students;                                                 1|Ben Jerry|true|1
+2|Breyer Ice|true|4
+3|Alice Wonder|false|3
+4|Steve Wonder|false|2
+5|Mickey Mouse|true|5
+6|Sarah Blue|true|5
+7|Laura Leer|true|2
+8|Cara Yates|true|1
+
+2.)sqlite> UPDATE students SET class_id=3 WHERE name="Steve Wonder";
+sqlite> SELECT * FROM students;
+1|Ben Jerry|true|1
+2|Breyer Ice|true|4
+3|Alice Wonder|false|3
+4|Steve Wonder|false|3
+5|Mickey Mouse|true|5
+6|Sarah Blue|true|5
+7|Laura Leer|true|2
+8|Cara Yates|true|1
+
+3.)
+sqlite> SELECT students.*,class.* FROM (students INNER JOIN class ON students.class_id=class.id)
+   ...> ;
+1|Ben Jerry|true|1|1|Accounting
+2|Breyer Ice|true|4|4|Calculus
+3|Alice Wonder|false|3|3|Biology
+4|Steve Wonder|false|3|3|Biology
+5|Mickey Mouse|true|5|5|Sociology
+6|Sarah Blue|true|5|5|Sociology
+7|Laura Leer|true|2|2|Woman's Studies
+8|Cara Yates|true|1|1|Accounting
+
+4.)
+sqlite> SELECT students.name, students.full_time, class.class_name FROM students JOIN class ON students.class_id=class.id;
+Ben Jerry|true|Accounting
+Breyer Ice|true|Calculus
+Alice Wonder|false|Biology
+Steve Wonder|false|Biology
+Mickey Mouse|true|Sociology
+Sarah Blue|true|Sociology
+Laura Leer|true|Woman's Studies
+Cara Yates|true|Accounting
+
+5.
+sqlite> DELETE FROM students WHERE name="Alice Wonder";
+sqlite> SELECT * FROM students;
+1|Ben Jerry|true|1
+2|Breyer Ice|true|4
+4|Steve Wonder|false|3
+5|Mickey Mouse|true|5
+6|Sarah Blue|true|5
+7|Laura Leer|true|2
+8|Cara Yates|true|1
+
+Extra Joins:
+
+sqlite> SELECT name, full_time, class_id FROM students LEFT OUTER JOIN class ON students.class_id=class.id;
+Ben Jerry|true|1
+Breyer Ice|true|4
+Steve Wonder|false|3
+Mickey Mouse|true|5
+Sarah Blue|true|5
+Laura Leer|true|2
+
+sqlite> SELECT name, full_time, class_id FROM students CROSS JOIN class;
+Ben Jerry|true|1
+Ben Jerry|true|1
+Ben Jerry|true|1
+Ben Jerry|true|1
+Ben Jerry|true|1
+Breyer Ice|true|4
+Breyer Ice|true|4
+Breyer Ice|true|4
+Breyer Ice|true|4
+Breyer Ice|true|4
+Steve Wonder|false|3
+Steve Wonder|false|3
+Steve Wonder|false|3
+Steve Wonder|false|3
+Steve Wonder|false|3
+Mickey Mouse|true|5
+Mickey Mouse|true|5
+Mickey Mouse|true|5
+Mickey Mouse|true|5
+Mickey Mouse|true|5
+Sarah Blue|true|5
+Sarah Blue|true|5
+Sarah Blue|true|5
+Sarah Blue|true|5
+Sarah Blue|true|5
+Laura Leer|true|2
+Laura Leer|true|2
+Laura Leer|true|2
+Laura Leer|true|2
+Laura Leer|true|2
+Cara Yates|true|1
+Cara Yates|true|1
+Cara Yates|true|1
+Cara Yates|true|1
+Cara Yates|true|1
