@@ -32,6 +32,10 @@ def create_kitten(db, name, age)
   db.execute("INSERT INTO kittens (name, age) VALUES (?, ?)", [name, age])
 end
 
+def retrieve_log
+  db.each
+end
+
 10000.times do
   create_kitten(db, Faker::Name.name, Faker::Number.number(2))
 end
