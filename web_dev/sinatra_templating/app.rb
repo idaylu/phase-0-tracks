@@ -21,6 +21,10 @@ get '/students/info' do
   erb :info
 end
 
+get '/students/update_info' do
+  erb :update_info
+end
+
 # create new students via
 # a form
 post '/students' do
