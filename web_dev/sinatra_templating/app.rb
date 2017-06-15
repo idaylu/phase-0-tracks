@@ -34,14 +34,18 @@ end
 
 post '/students' do
   db.execute("CREATE TABLE IF NOT EXISTS additional_campuses(
-    id INTEGER PRIMARY KEY,
-    campus VARCHAR(255),
+    campus VARCHAR(255)
+    student_id INT,
+    FOREIGN KEY (student_id) REFERENCES students(id)
     )")
 
-  db.execute("CREATE TABLE IF NOT EXISTS additional_campuses_students(
-    student_id INT,
-    campus_id INT
-    )")
+  redirect '/'
+end
+
+post '/students' do
+  db.execute("INSERT INTO additional_campuses(campus, student_id) VALUES (?,?)", [params['campus'], params['student_id'])
+  db.execute("INSERT INTO additional_campuses_students")
+
   redirect '/'
 end
 
